@@ -27,6 +27,7 @@ main {
   width: -moz-max-content;
   width: max-content;
   padding: 1em;
+  border-radius: 1em;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
