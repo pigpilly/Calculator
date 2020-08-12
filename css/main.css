@@ -63,18 +63,31 @@ main > button {
           box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+main > button:focus {
+  border: 4px solid #cad3dc;
+  outline: none;
+}
+
+main > button:hover {
+  outline: none;
+}
+
 main > button:active {
   border: 4px solid #cad3dc;
   -webkit-box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+main > button:visited {
+  text-decoration: none;
+}
+
 main .operation {
   color: #008eff;
 }
 
-main .delete {
-  color: #ff105e;
+main .ac {
+  color: #ff5c10;
 }
 
 main .output {
@@ -114,5 +127,109 @@ main .output .current-operand {
 main .span-two {
   grid-row: span 2;
   border-radius: 1em;
+}
+
+.toggleClass {
+  position: absolute;
+  top: 10px;
+  right: 6rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #091921;
+  color: #091921;
+  font-size: 12px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.toggleClass::before {
+  position: absolute;
+  left: 20px;
+  content: "Dark Mode";
+  white-space: nowrap;
+}
+
+.dark {
+  background: #091921;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.dark main {
+  background-color: #091921;
+  border: 4px solid #091921;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark main > button {
+  background-color: #091921;
+  color: lightgray;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark main > button:focus {
+  border: 4px solid #091921;
+  outline: none;
+}
+
+.dark main > button:hover {
+  outline: none;
+}
+
+.dark main > button:active {
+  border: 4px solid #091921;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark main > button:visited {
+  text-decoration: none;
+}
+
+.dark main .operation {
+  color: #008eff;
+}
+
+.dark main .ac {
+  color: #ff5c10;
+}
+
+.dark main .output {
+  border: 4px solid #091921;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark main .output .previous-operand {
+  color: darkgray;
+}
+
+.dark main .output .current-operand {
+  color: lightgray;
+}
+
+.dark .toggleClass {
+  background: #d1dae3;
+  color: #d1dae3;
+}
+
+.dark .toggleClass::before {
+  content: "Light Mode";
 }
 /*# sourceMappingURL=main.css.map */

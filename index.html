@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/script.js" defer></script>
   </head>
-  <body>
+  <body class="dark">
     <main class="calculator-grid">
       <div class="output">
         <div class="previous-operand" data-previous-operand></div>
         <div class="current-operand" data-current-operand></div>
       </div>
-      <button class="operation" data-ac>AC</button>
+      <button class="ac" data-ac>AC</button>
       <button class="operation" data-operation>%</button>
       <button class="operation" data-operation>/</button>
-      <button class="delete" data-delete>DEL</button>
+      <button class="operation" data-delete>DEL</button>
       <button data-number>1</button>
       <button data-number>2</button>
       <button data-number>3</button>
@@ -34,5 +34,7 @@
       <button data-number>0</button>
       <button class="operation" data-equals>=</button>
     </main>
+
+    <div class="toggleClass"></div>
   </body>
 </html>

@@ -137,3 +137,9 @@ deleteButton.addEventListener(`click`, () => {
   calculator.delete();
   calculator.updateDisplay();
 });
+
+const body = document.querySelector("body");
+const toggle = document.querySelector(".toggleClass");
+toggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
+});
