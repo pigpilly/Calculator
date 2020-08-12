@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "watch": true,
+    "lib": ["DOM", "ES2020"],
+    "strictNullChecks": true
+  }
+}
