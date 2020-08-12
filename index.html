@@ -3,35 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>TS Calculator</title>
 
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <div class="calculator-grid">
+    <main class="calculator-grid">
       <div class="output">
         <div class="previous-operand" data-previous-operand></div>
         <div class="current-operand" data-current-operand></div>
       </div>
-      <button class="span-two" data-ac>AC</button>
-      <button data-delete>DEL</button>
-      <button data-operation>/</button>
+      <button class="operation" data-ac>AC</button>
+      <button class="operation" data-operation>%</button>
+      <button class="operation" data-operation>/</button>
+      <button class="delete" data-delete>DEL</button>
       <button data-number>1</button>
       <button data-number>2</button>
       <button data-number>3</button>
-      <button data-operation>*</button>
+      <button class="operation" data-operation>*</button>
       <button data-number>4</button>
       <button data-number>5</button>
       <button data-number>6</button>
-      <button data-operation>+</button>
+      <button class="operation" data-operation>-</button>
       <button data-number>7</button>
       <button data-number>8</button>
       <button data-number>9</button>
-      <button data-operation>-</button>
+      <button class="span-two operation" data-operation>+</button>
       <button data-number>.</button>
       <button data-number>0</button>
-      <button class="span-two" data-equals>=</button>
-    </div>
+      <button class="operation" data-equals>=</button>
+    </main>
   </body>
 </html>

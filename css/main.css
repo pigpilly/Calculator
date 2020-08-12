@@ -1,60 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-*,
-*::before,
-*::after {
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
   margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: -webkit-gradient(linear, left top, right top, from(#00aaff), to(#00ff6c));
-  background: linear-gradient(to right, #00aaff, #00ff6c);
+  background-color: #d1dae3;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.calculator-grid {
-  min-height: 100vh;
+main {
+  min-height: 90vh;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (100px)[4];
-      grid-template-columns: repeat(4, 100px);
-  -ms-grid-rows: minmax(120px, auto) (100px)[5];
-      grid-template-rows: minmax(120px, auto) repeat(5, 100px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-grid-columns: (5rem)[4];
+      grid-template-columns: repeat(4, 5rem);
+  -ms-grid-rows: minmax(7.5rem, auto) (5rem)[5];
+      grid-template-rows: minmax(7.5rem, auto) repeat(5, 5rem);
+  grid-gap: 10px;
+  background-color: #d1dae3;
+  -webkit-box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.calculator-grid > button {
+main > button {
   cursor: pointer;
-  font-size: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  font-size: 1.5em;
+  border-radius: 50%;
+  border: none;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.75);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #d1dae3;
+  color: #091921;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  -webkit-box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.calculator-grid > button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+main > button:active {
+  border: 4px solid #cad3dc;
+  -webkit-box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.calculator-grid > button:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+main .operation {
+  color: #008eff;
 }
 
-.calculator-grid .span-two {
-  grid-column: span 2;
+main .delete {
+  color: #ff105e;
 }
 
-.calculator-grid .output {
+main .output {
   grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 1em;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,23 +87,31 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 10px;
   word-wrap: break-word;
   word-break: break-all;
+  border: 4px solid #cad3dc;
+  border-radius: 1em;
+  -webkit-box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.calculator-grid .output .previous-operand {
-  color: rgba(255, 255, 255, 0.75);
+main .output .previous-operand {
+  color: #555555;
   font-size: 1.5rem;
 }
 
-.calculator-grid .output .current-operand {
-  color: white;
+main .output .current-operand {
+  color: #333333;
   font-size: 2.5rem;
+}
+
+main .span-two {
+  grid-row: span 2;
+  border-radius: 1em;
 }
 /*# sourceMappingURL=main.css.map */
